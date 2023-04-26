@@ -2,7 +2,7 @@
 % Please edit documentation in R/icd_scrape.R
 \name{icd_extract}
 \alias{icd_extract}
-\title{extract the icd from a string to leave just descriptors}
+\title{Extract ICD-10}
 \usage{
 icd_extract(vec)
 }

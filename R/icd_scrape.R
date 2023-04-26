@@ -1,3 +1,5 @@
+#' Trim out ICD-10
+#'
 #' remove the icd from a string to leave just descriptors
 #'
 #' @param vec a vector of strings
@@ -19,6 +21,8 @@ icd_trim <- function(vec, proc = F) {
 }
 
 
+#' Extract ICD-10
+#'
 #' extract the icd from a string to leave just descriptors
 #'
 #' @param vec a vector of strings
@@ -33,6 +37,8 @@ icd_extract <- function(vec) {
 }
 
 
+#' Full Webscrape of ICD-10 data
+#'
 #' run a full refresh of the icd-10 scraper for diagnosiscodes
 #'
 #' @param zzz how long inbetween website pulls... please don't go below 5
@@ -50,14 +56,14 @@ diag_scrape <- function(zzz = 5) {
     rvest::html_elements(css = ".identifier") %>%
     rvest::html_text() %>%
     trimws() %>%
-    head(limit) -> layer1
+    utils::head(limit) -> layer1
   # layer1 <-  layer1[1:22]
 
   test %>%
     rvest::html_elements(css = ".body-content li") %>%
     rvest::html_text() %>%
     trimws() %>%
-    head(limit) -> layer1t
+    utils::head(limit) -> layer1t
 
   ppp <- data.frame(l1 = "NA", l1c = "NA", l2 = "NA", l2c = "NA", l3 = "NA", l3c = "NA", l4 = "NA", l4c = "NA")[-1, ]
 

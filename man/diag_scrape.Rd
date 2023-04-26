@@ -2,7 +2,7 @@
 % Please edit documentation in R/icd_scrape.R
 \name{diag_scrape}
 \alias{diag_scrape}
-\title{run a full refresh of the icd-10 scraper for diagnosiscodes}
+\title{Full Webscrape of ICD-10 data}
 \usage{
 diag_scrape(zzz = 5)
 }

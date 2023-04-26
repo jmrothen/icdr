@@ -2,7 +2,7 @@
 % Please edit documentation in R/icd_scrape.R
 \name{icd_trim}
 \alias{icd_trim}
-\title{remove the icd from a string to leave just descriptors}
+\title{Trim out ICD-10}
 \usage{
 icd_trim(vec, proc = F)
 }
