@@ -16,5 +16,5 @@ trimmed vector
 extract the icd from a string to leave just descriptors
 }
 \examples{
-icd_clean(c("U07.1 Covid", "E11 Diabetes"))
+icd_extract(c("U07.1 Covid", "E11 Diabetes"))
 }
