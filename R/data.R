@@ -2,6 +2,8 @@
 #'
 #' a icd-map generated in 2022
 #'
+#'
+#' @name icd10map
 #' @format `icd10map`
 #' a dataset with an example of the icd_scrape functionality
 #' \describe{
@@ -11,4 +13,5 @@
 #'  ...
 #' }
 #' @source bozo
+
 "icd10map"
