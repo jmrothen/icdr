@@ -4,14 +4,11 @@
 #'
 #'
 #' @name icd10map
-#' @format `icd10map`
+#' @docType data
+#' @format `icd10map table`
 #' a dataset with an example of the icd_scrape functionality
-#' \describe{
-#'  \item{idk}{test}
-#'  \item {more testing, is this working}{shrug, probably not}
-#'  \item {pe}{nis}
-#'  ...
-#' }
 #' @source bozo
+#' @keywords datasets
+
 
 "icd10map"
