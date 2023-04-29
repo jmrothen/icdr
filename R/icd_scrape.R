@@ -1,3 +1,6 @@
+utils::data("icd10map", envir=environment())
+
+
 #' Trim out ICD-10
 #'
 #' remove the icd from a string to leave just descriptors
@@ -9,7 +12,7 @@
 #' icd_trim(c("U07.1 Covid", "E11 Diabetes"))
 #' @export
 icd_trim <- function(vec, proc = F) {
-  stringr::str_remove_all(vec, "(\\-*[A-Z]{1}[0-9]{2})|(\\-*[A-Z]{1}[0-9]{1}[A-Z]{1})|(O9A)") %>%
+  stringr::str_remove_all(vec, "([A-Z]{1}[0-9]{2}[\\.]{0,1}[a-zA-Z0-9]{0,5})") %>%
     trimws() -> out
   # this was added in anticaption of procedurecodes
   if (proc) {
@@ -31,10 +34,34 @@ icd_trim <- function(vec, proc = F) {
 #' icd_extract(c("U07.1 Covid", "E11 Diabetes"))
 #' @export
 icd_extract <- function(vec) {
-  stringr::str_extract(vec, "(\\-*[A-Z]{1}[0-9]{2})|(\\-*[A-Z]{1}[0-9]{1}[A-Z]{1})|(O9A)") %>%
+  stringr::str_extract(vec, "([A-Z]{1}[0-9]{2}[\\.]{0,1}[a-zA-Z0-9]{0,5})") %>%
     trimws() -> out
   return(out)
 }
+
+
+
+#' Validate ICD-10
+#'
+#' check if icd code is in the database
+#'
+#' @param code a vector of strings
+#' @param dataset name of dataframe
+#' @param column name of column
+#' @return boolean
+#' @examples
+#' icd_check('E11')
+#' @export
+icd_check <- function(code, dataset=NULL, column='l4c'){
+  if(is.null(dataset)){
+    dataset <- icd10map
+  }
+  code <- as.character(code)
+  colindex <- grep(column, colnames(dataset))
+  grepl(code,dataset[,colindex]) -> out
+  return(sum(out)>=1)
+}
+
 
 
 #' Full Webscrape of ICD-10 data

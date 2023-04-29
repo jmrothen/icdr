@@ -8,5 +8,6 @@
 
 library(testthat)
 library(icdr)
+utils::data("icd10map", envir=environment())
 
 test_check("icdr")

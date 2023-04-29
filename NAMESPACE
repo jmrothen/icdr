@@ -2,6 +2,7 @@
 
 export("%>%")
 export(diag_scrape)
+export(icd_check)
 export(icd_extract)
 export(icd_trim)
 importFrom(magrittr,"%>%")

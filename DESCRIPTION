@@ -2,10 +2,10 @@ Package: icdr
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: J. Rothen 
+Maintainer: J. Rothen <jmrothen.business@gmail.com>
+Description: Collection of functions to facilitate the use of the standardized ICD-10 Diagnosis Codes.
+    Future developments will be focused on doing the same for Procedure codes, CPT codes, and more. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
