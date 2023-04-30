@@ -23,3 +23,4 @@
 #' a dataset to facilitate billtype translate-ability
 #' @source https://med.noridianmedicare.com/web/jea/topics/claim-submission/bill-types
 #' @keywords datasets
+"billtype"
