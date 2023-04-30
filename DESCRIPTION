@@ -1,6 +1,6 @@
 Package: icdr
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Tools to work with ICD-10 Codes and friends
 Version: 0.1.0
 Author: J. Rothen 
 Maintainer: J. Rothen <jmrothen.business@gmail.com>
