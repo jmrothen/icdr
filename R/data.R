@@ -24,3 +24,6 @@
 #' @source https://med.noridianmedicare.com/web/jea/topics/claim-submission/bill-types
 #' @keywords datasets
 "billtype"
+
+
+#
