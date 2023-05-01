@@ -24,3 +24,15 @@
 #' @source https://med.noridianmedicare.com/web/jea/topics/claim-submission/bill-types
 #' @keywords datasets
 "billtype"
+
+
+#' revenuecode maps
+#'
+#' a map for revenuecode details
+#' @name revenuecode
+#' @docType data
+#' @format `revenuecode table`
+#' a dataset to facilitate the categorization of revenuecode
+#' @source https://med.noridianmedicare.com/web/jea/topics/claim-submission/revenue-codes
+#' @keywords datasets
+"revenuecode"
