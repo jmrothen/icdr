@@ -1,4 +1,4 @@
-test_that("check_billtype works",{
+test_that("billtype check works",{
   expect_equal(billtype_check('0111'),T)
 })
 
