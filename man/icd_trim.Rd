@@ -2,20 +2,20 @@
 % Please edit documentation in R/diagnosis.R
 \name{icd_trim}
 \alias{icd_trim}
-\title{Trim out ICD-10}
+\title{Trim ICD-10 codes}
 \usage{
 icd_trim(vec, proc = F)
 }
 \arguments{
 \item{vec}{a vector of strings}
 
-\item{proc}{indicator for procedurecode scrape}
+\item{proc}{indicator for procedurecode scrape, currently unused}
 }
 \value{
 trimmed vector
 }
 \description{
-remove the icd from a string to leave just descriptors
+remove ICD-10 codes from a string
 }
 \examples{
 icd_trim(c("U07.1 Covid", "E11 Diabetes"))

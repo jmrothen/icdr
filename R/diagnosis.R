@@ -1,12 +1,12 @@
 utils::data("icd10map", envir=environment())
 
 
-#' Trim out ICD-10
+#' Trim ICD-10 codes
 #'
-#' remove the icd from a string to leave just descriptors
+#' remove ICD-10 codes from a string
 #'
 #' @param vec a vector of strings
-#' @param proc indicator for procedurecode scrape
+#' @param proc indicator for procedurecode scrape, currently unused
 #' @return trimmed vector
 #' @examples
 #' icd_trim(c("U07.1 Covid", "E11 Diabetes"))
@@ -26,7 +26,7 @@ icd_trim <- function(vec, proc = F) {
 
 #' Extract ICD-10
 #'
-#' extract the icd from a string to leave just descriptors
+#' extract the ICD-10 codes from a string
 #'
 #' @param vec a vector of strings
 #' @return trimmed vector
@@ -43,11 +43,11 @@ icd_extract <- function(vec) {
 
 #' Validate ICD-10
 #'
-#' check if icd code is in the database
+#' check if ICD-10 code is in the database
 #'
 #' @param code a vector of strings
-#' @param dataset name of dataframe
-#' @param column name of column
+#' @param dataset name of dataframe, default uses the internal table
+#' @param column name of column, default uses the relevant columns in the internal table
 #' @return boolean
 #' @examples
 #' icd_check('E11')
@@ -67,6 +67,8 @@ icd_check <- function(code, dataset=NULL, column='l4c'){
 #' Full Webscrape of ICD-10 data
 #'
 #' run a full refresh of the icd-10 scraper for diagnosiscodes
+#' note, this takes a long time due to the sleep time in between http requests
+#' this is to guarantee we do not ddos the website of interest
 #'
 #' @param zzz how long inbetween website pulls... please don't go below 5
 #' @return updated icd-10-diag tables
@@ -76,15 +78,17 @@ icd_check <- function(code, dataset=NULL, column='l4c'){
 diag_scrape <- function(zzz = 5) {
   test <- rvest::read_html("https://www.icd10data.com/ICD10CM/Codes")
 
-  # is currently 22
-  limit <- grep("Z99", layer1)[1]
 
   test %>%
     rvest::html_elements(css = ".identifier") %>%
     rvest::html_text() %>%
-    trimws() %>%
-    utils::head(limit) -> layer1
-  # layer1 <-  layer1[1:22]
+    trimws() -> tempe
+
+  limit <- grep("Z99", tempe)[1]
+
+
+  tempe %>% utils::head(limit) -> layer1
+
 
   test %>%
     rvest::html_elements(css = ".body-content li") %>%

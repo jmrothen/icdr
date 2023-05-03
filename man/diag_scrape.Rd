@@ -14,6 +14,8 @@ updated icd-10-diag tables
 }
 \description{
 run a full refresh of the icd-10 scraper for diagnosiscodes
+note, this takes a long time due to the sleep time in between http requests
+this is to guarantee we do not ddos the website of interest
 }
 \examples{
 # diag_scrape(5)

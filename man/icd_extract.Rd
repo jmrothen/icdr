@@ -13,7 +13,7 @@ icd_extract(vec)
 trimmed vector
 }
 \description{
-extract the icd from a string to leave just descriptors
+extract the ICD-10 codes from a string
 }
 \examples{
 icd_extract(c("U07.1 Covid", "E11 Diabetes"))

@@ -9,15 +9,15 @@ icd_check(code, dataset = NULL, column = "l4c")
 \arguments{
 \item{code}{a vector of strings}
 
-\item{dataset}{name of dataframe}
+\item{dataset}{name of dataframe, default uses the internal table}
 
-\item{column}{name of column}
+\item{column}{name of column, default uses the relevant columns in the internal table}
 }
 \value{
 boolean
 }
 \description{
-check if icd code is in the database
+check if ICD-10 code is in the database
 }
 \examples{
 icd_check('E11')
