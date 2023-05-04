@@ -12,7 +12,7 @@ idk i'll probably add some more functionality to it at this point, seems fun
 
 -   ~~US Billtype Codes~~
 
--   US Revenue Codes
+-   ~~US Revenue Codes~~
 
 -   Place of service code
 
