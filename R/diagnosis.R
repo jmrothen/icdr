@@ -6,20 +6,13 @@ utils::data("icd10map", envir=environment())
 #' remove ICD-10 codes from a string
 #'
 #' @param vec a vector of strings
-#' @param proc indicator for procedurecode scrape, currently unused
 #' @return trimmed vector
 #' @examples
 #' icd_trim(c("U07.1 Covid", "E11 Diabetes"))
 #' @export
-icd_trim <- function(vec, proc = F) {
+icd_trim <- function(vec) {
   stringr::str_remove_all(vec, "([A-Z]{1}[0-9]{2}[\\.]{0,1}[a-zA-Z0-9]{0,5})") %>%
     trimws() -> out
-  # this was added in anticaption of procedurecodes
-  if (proc) {
-    out %>%
-      stringr::str_remove_all("(.[0-9]{1,4})|(.[0-9]{1,4}[A-Z]{1,3})") %>%
-      trimws() -> out
-  }
   return(out)
 }
 
@@ -158,7 +151,7 @@ diag_scrape <- function(zzz = 5) {
             l2c = layer22[j],
             l3 = icd_trim(layer3[k]),
             l3c = layer33[k],
-            l4 = icd_trim(layer4[l], T),
+            l4 = icd_trim(layer4[l]),
             l4c = layer44[l]
           ) -> ppp
         }

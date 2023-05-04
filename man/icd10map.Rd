@@ -15,6 +15,9 @@ bozo
 icd10map
 }
 \description{
-a icd-map generated in 2022
+a table for categorizing diagnosiscodes
+}
+\details{
+as of May 3rd 2023
 }
 \keyword{datasets}

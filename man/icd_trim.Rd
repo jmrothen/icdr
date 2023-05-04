@@ -4,12 +4,10 @@
 \alias{icd_trim}
 \title{Trim ICD-10 codes}
 \usage{
-icd_trim(vec, proc = F)
+icd_trim(vec)
 }
 \arguments{
 \item{vec}{a vector of strings}
-
-\item{proc}{indicator for procedurecode scrape, currently unused}
 }
 \value{
 trimmed vector
