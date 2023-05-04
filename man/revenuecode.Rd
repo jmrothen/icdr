@@ -17,4 +17,7 @@ revenuecode
 \description{
 a map for revenuecode details
 }
+\details{
+as of May 1st 2023
+}
 \keyword{datasets}

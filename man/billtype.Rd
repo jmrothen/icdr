@@ -17,4 +17,7 @@ billtype
 \description{
 a map for cms billtypes
 }
+\details{
+as of Apr 30th 2023
+}
 \keyword{datasets}

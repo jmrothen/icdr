@@ -1,7 +1,8 @@
 #' default map
 #'
-#' a icd-map generated in 2022
+#' a table for categorizing diagnosiscodes
 #'
+#' as of May 3rd 2023
 #'
 #' @name icd10map
 #' @docType data
@@ -16,6 +17,7 @@
 #'
 #' a map for cms billtypes
 #'
+#' as of Apr 30th 2023
 #'
 #' @name billtype
 #' @docType data
@@ -29,6 +31,9 @@
 #' revenuecode maps
 #'
 #' a map for revenuecode details
+#'
+#' as of May 1st 2023
+#'
 #' @name revenuecode
 #' @docType data
 #' @format `revenuecode table`
