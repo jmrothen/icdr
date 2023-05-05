@@ -8,7 +8,7 @@ idk i'll probably add some more functionality to it at this point, seems fun
 
 -   CPT Codes
 
--   ICD-10-CM
+-   ICD-10-PCS
 
 -   ~~US Billtype Codes~~
 
