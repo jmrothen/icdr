@@ -1,8 +1,8 @@
-# icd_scrape
+# icdr
 
 started off as a webscrape project to consolidate the icd10 codes into a nice hierarchical categorization table
 
-idk i'll probably add some more functionality to it at this point, seems fun
+idk i'll probably add some more functionality to it at this point, seems fun and is useful for work
 
 ## future additions
 
@@ -14,11 +14,11 @@ idk i'll probably add some more functionality to it at this point, seems fun
 
 -   ~~US Revenue Codes~~
 
--   Place of service code
+-   ~~Place of service code~~
 
 -   maybe integrate nyu non-emergent algorithm
 
--   might integrate the functionality of the comorbidity packaged
+-   might integrate the functionality of the comorbidity packaged?
 
 -   CCS?
 
@@ -28,4 +28,4 @@ idk i'll probably add some more functionality to it at this point, seems fun
 
 Not sure how much I'll add, but the more the merrier
 
-Feel free to reach out with ideas/request if you stumble across this project
+Feel free to reach out with ideas/requests if you stumble across this project
