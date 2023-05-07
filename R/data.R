@@ -41,3 +41,18 @@
 #' @source https://med.noridianmedicare.com/web/jea/topics/claim-submission/revenue-codes
 #' @keywords datasets
 "revenuecode"
+
+
+#' placeofservice maps
+#'
+#' a map for placeofservice details
+#'
+#' as of May 7th 2023
+#'
+#' @name placeofservice
+#' @docType data
+#' @format `placeofservice table`
+#' a dataset to facilitate the categorization of placeofservice codes
+#' @source https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set
+#' @keywords datasets
+"placeofservice"

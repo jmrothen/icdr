@@ -11,5 +11,7 @@ library(icdr)
 utils::data("icd10map", envir=environment())
 utils::data("billtype", envir=environment())
 utils::data("revenuecode", envir=environment())
+utils::data("placeofservice", envir=environment())
+
 
 test_check("icdr")
